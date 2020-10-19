@@ -30,7 +30,7 @@ http://materialdornel.readthedocs.io/pt_BR/latest/linguagem-sql/indices.html
 # 3 - Crie um usuário chamado empresa_admim_local para o banco de dados EmpresaDB. Este usuário deve ter todos os privilégios mas sem acesso remoto.
 	
   CREATE USER empresa_admim_local@EmpresaDB IDENTFIED BY ‘123456’ ;
-	GRANT ALL PRIVILEGES ON *.* TO ‘empresa_admim_local’@‘EmpresaDB’;
+	GRANT ALL PRIVILEGES ON *.* TO empresa_admim_local@EmpresaDB;
 
 # 4 - Crie um usuário chamado empresa_admim para o banco de dados EmpresaDB. Este usuário deve ter todos os privilégios mas com acesso remoto.
 	
