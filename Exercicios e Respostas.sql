@@ -21,7 +21,7 @@ http://materialdornel.readthedocs.io/pt_BR/latest/linguagem-sql/indices.html
 
 1 - Faça o comando de Criação do Banco de Dados acima informando a codificação de caracteres e o collate. */
   
-  CREATE DATABASE equipeDB CHARACTER SET utf8 COLLATE utf8_general_ci;
+  CREATE DATABASE EmpresaDB CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 # 2 - Explique as diferentes opções de codificação de caracteres e de collations.
 	
