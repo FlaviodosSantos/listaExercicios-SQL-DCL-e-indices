@@ -29,8 +29,8 @@ http://materialdornel.readthedocs.io/pt_BR/latest/linguagem-sql/indices.html
 
 # 3 - Crie um usuário chamado empresa_admim_local para o banco de dados EmpresaDB. Este usuário deve ter todos os privilégios mas sem acesso remoto.
 	
-  	CREATE USER empresa_admim_local@EmpresaDB IDENTFIED BY '123456' ;
-	GRANT ALL PRIVILEGES ON *.* TO empresa_admim_local@EmpresaDB;
+  	CREATE USER 'empresa_admim_local'@'EmpresaDB' IDENTFIED BY '123456' ;
+	GRANT ALL PRIVILEGES ON *.* TO 'empresa_admim_local'@'EmpresaDB';
 
 # 4 - Crie um usuário chamado empresa_admim para o banco de dados EmpresaDB. Este usuário deve ter todos os privilégios mas com acesso remoto.
 	
@@ -40,19 +40,19 @@ http://materialdornel.readthedocs.io/pt_BR/latest/linguagem-sql/indices.html
 
 # 5 - Crie um usuário chamado empresa_gerente para o banco de dados EmpresaDB. Este usuário deve ter privilégios apenas de fazer consultas em todas as tabelas. Ele pode inserir e atualizar as tabelas Equipe, Membro, Atividade e AtividadeProjeto.
 	
-  	CREATE USER empresa_gerente@EmpresaDB INDETIFIED BY 'gerente'; 
+  	CREATE USER 'empresa_gerente'@'EmpresaDB' INDETIFIED BY 'gerente'; 
 	GRANT INSERT, UPDATE ON EmpresaDB.Equipe , 
       				EmpresaDB.Membro , 
       				EmpresaDB.Atividade, 
       				EmpresaDB.AtiviadeProjeto 
-		TO empresa_gerente@EmpresaDB ;
+		TO 'empresa_gerente'@'EmpresaDB' ;
 	FLUSH PRIVILEGES;
 
 # 6 - Crie um usuário chamado empresa_supervisor para o banco de dados EmpresaDB. Este usuário deve ter privilégios apenas de fazer consultas em uma Visão da tabela funcionário sem o salário (crie a visão). Ele disso ele pode consultar as tabelas Atividade e AtividadeMembro e Projeto.
 	
-  	CREATE USER empresa_supervisor@EmpresaDB INDETIFIED BY 'supervisor';
+  	CREATE USER 'empresa_supervisor'@'EmpresaDB' INDETIFIED BY 'supervisor';
       	GRANT SELECT (codigo, nome, sexo, dataNasc, supervisor, depto) ON 
-      		EmpresaDB.funcionario TO ‘empresa_supervisor@EmpresaDB’;
+      		'EmpresaDB.funcionario' TO 'empresa_supervisor'@'EmpresaDB';
 	FLUSH PRIVILEGES;
 
 
