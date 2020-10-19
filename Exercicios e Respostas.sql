@@ -34,8 +34,8 @@ http://materialdornel.readthedocs.io/pt_BR/latest/linguagem-sql/indices.html
 
 # 4 - Crie um usuário chamado empresa_admim para o banco de dados EmpresaDB. Este usuário deve ter todos os privilégios mas com acesso remoto.
 	
-  CREATE USER ‘empresa_admim’@‘EmpresaDB’ IDENTIFIED BY ‘admim’ ;
-	GRANT ALL PRIVILEGES ON *.* TO ‘empresa_admim’@’200.198.255.100’;
+  CREATE USER empresa_admim@EmpresaDB IDENTIFIED BY "admim" ;
+	GRANT ALL PRIVILEGES ON *.* TO empresa_admim@200.198.255.100;
 	FLUSH PRIVILEGES;
 
 # 5 - Crie um usuário chamado empresa_gerente para o banco de dados EmpresaDB. Este usuário deve ter privilégios apenas de fazer consultas em todas as tabelas. Ele pode inserir e atualizar as tabelas Equipe, Membro, Atividade e AtividadeProjeto.
